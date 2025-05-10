@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #6d28d9;
+    --secondary: #f43f5e;
+    --accent: #f59e0b;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    scroll-behavior: smooth;
+}
+
+.radhe-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+}
+
+.radhe-text {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.radhe-text-alt {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.feature-icon {
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotateY(180deg) scale(1.2);
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.room-card {
+    perspective: 1000px;
+}
+
+.room-card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.room-card:hover .room-card-inner {
+    transform: rotateY(10deg);
+}
+
+.floating {
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.glow {
+    box-shadow: 0 0 15px rgba(109, 40, 217, 0.5);
+}
+
+.glow:hover {
+    box-shadow: 0 0 25px rgba(109, 40, 217, 0.8);
+}
+#close :hover{
+    cursor: pointer;
+    color: var(--secondary);
+    transition: color 0.3s ease;
+    
+}
+.divine-logo {
+    position: relative;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+    transform-style: preserve-3d;
+    transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+  
+  .om-symbol {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 3px 5px rgba(139, 92, 246, 0.3));
+  }
+  
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #8B5CF6, #EC4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .text-gold { color: #F59E0B; }
+  .text-purple { color: #7C3AED; }
+  .text-pink { color: #EC4899; }
+  
+  .floral-decoration {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    opacity: 0.7;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+  }
+  
+  .divine-logo:hover {
+    transform: translateY(-5px) rotateY(10deg);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
+  }
+ /* Custom Animations */
+ @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 12s ease infinite;
+}
+
+@keyframes soft-zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+.animate-soft-zoom {
+    animation: soft-zoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 15s linear infinite;
+}
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+.animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+.animate-pulse-slow {
+    animation: pulse-slow 4s ease infinite;
+}
+
+@keyframes float-1 {
+    0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    50% { transform: translateY(-20px) translateX(10px) rotate(5deg); }
+}
+@keyframes float-2 {
+    0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    50% { transform: translateY(15px) translateX(-5px) rotate(-3deg); }
+}
+.animate-float-1 { animation: float-1 8s ease-in-out infinite; }
+.animate-float-2 { animation: float-2 7s ease-in-out infinite; }
