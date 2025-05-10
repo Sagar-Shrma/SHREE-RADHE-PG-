@@ -154,5 +154,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
->>>>>>> 19e60a184e9d15d5972411980a6ef8354ac498fe
+
 });
